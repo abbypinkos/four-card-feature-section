@@ -81,7 +81,7 @@ h1 span {
     overflow: hidden;
     height: 14rem;
     width: 19rem;
-    box-shadow: 0 10px 15px 0 rgba(46, 129, 150, 0.190);
+    box-shadow: 0 10px 25px 0 rgba(28, 83, 134, 0.19);
     padding: 1.5rem 1.5rem;
     grid-area: item1;
 }
@@ -108,4 +108,61 @@ h1 span {
     background: bottom 2rem right 2rem / 18% no-repeat url(images/icon-calculator.svg);
     border-top: 3px solid  var(--blue);
     grid-area: item4;
+}
+
+@media only screen and (min-width: 1201px) {
+    body{
+        grid-template-columns: auto;
+        grid-template-rows: .7fr .3fr;
+    }
+    header {
+        font-size: 15px;
+        width: 33rem;
+        padding: 4rem 0;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+        line-height: 3.2rem;
+        padding-bottom: 1rem;
+    }
+
+    h1 span {
+        display: block;
+    }
+     
+    .grid-container {
+        grid-template-areas: 
+        ". item2 ."
+        "item1 item2 item4"
+        "item1 item3 item4"
+        ". item3 .";
+        gap: 2rem;
+    }
+
+    .grid-item1, .grid-item2, .grid-item3, .grid-item4 {
+        height: 15.5rem;
+        width: 22rem;
+        padding: 1.8rem 2rem;
+    }
+
+    h2 {
+        padding-bottom: .5rem;
+    }
+
+    .grid-item1 {
+        border-top: 4px solid  var(--cyan);
+    }
+
+    .grid-item2 {
+        border-top: 4px solid  var(--red);
+    }
+
+    .grid-item3 {
+        border-top: 4px solid  var(--orange);
+    }
+
+    .grid-item4 {
+        border-top: 4px solid  var(--blue);
+    }
 }
